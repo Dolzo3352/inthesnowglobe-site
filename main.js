@@ -148,7 +148,30 @@
   const steps = [...document.querySelectorAll('.step')];
   const shots = [...document.querySelectorAll('.lens img')];
   const place = document.querySelector('[data-place]:not(.step)');
+  /* 유리구 안에 내리는 눈: 장면이 바뀔 때 한 번 휘날린다 */
+  const lc = document.querySelector('.lens-snow'), l = lc.getContext('2d'), L = lc.width;
+  const lf = Array.from({ length: 70 }, () => ({ x: Math.random() * L, y: Math.random() * L, r: 1 + Math.random() * 2.4, s: 0.25 + Math.random() * 0.6, vx: 0, vy: 0, p: Math.random() * 6.28 }));
+  let lensVisible = false, current = -1;
+  new IntersectionObserver(([e]) => { lensVisible = e.isIntersecting; }).observe(lc);
+  function lensFrame(t) {
+    if (lensVisible) {
+      l.clearRect(0, 0, L, L); l.fillStyle = 'rgba(255,255,255,.9)';
+      for (const f of lf) {
+        f.vx *= 0.96; f.vy *= 0.96;
+        f.x += f.vx + Math.sin(t / 1600 + f.p) * 0.25; f.y += f.vy + f.s;
+        if (f.y > L * 0.9) { f.y = -6; f.x = Math.random() * L; }
+        if (f.y < -8) f.y = L * 0.88;
+        if (f.x < -6) f.x = L + 6; if (f.x > L + 6) f.x = -6;
+        l.beginPath(); l.arc(f.x, f.y, f.r, 0, 6.283); l.fill();
+      }
+    }
+    requestAnimationFrame(lensFrame);
+  }
+  if (!reduce) requestAnimationFrame(lensFrame);
+  function swirl() { for (const f of lf) { f.vx = (Math.random() - 0.5) * 14; f.vy = -Math.random() * 9; } }
+
   function activate(i) {
+    if (i !== current) { if (current !== -1) swirl(); current = i; }
     steps.forEach((s, k) => s.classList.toggle('on', k === i));
     shots.forEach((s, k) => s.classList.toggle('on', k === i));
     place.textContent = steps[i].dataset.place;

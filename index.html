@@ -37,10 +37,11 @@
     <button class="globe" type="button" aria-describedby="globe-hint">
       <span class="globe-glass">
         <span class="globe-scene"></span>
+        <span class="floor"></span>
         <canvas class="globe-snow" width="360" height="360"></canvas>
-        <span class="globe-shine"></span>
+        <span class="glass"></span>
       </span>
-      <span class="globe-base"></span>
+      <img class="base" src="assets/base.svg" alt="">
       <span class="sr-only">스노우볼 흔들기</span>
     </button>
 
@@ -75,6 +76,7 @@
 </section>
 
 <section class="story" id="story">
+  <div class="story-bg" aria-hidden="true"></div>
   <h2 class="story-title">스노우볼 안에서 보내는 밤</h2>
 
   <div class="story-grid">
@@ -88,9 +90,11 @@
         <img src="assets/s6.webp" alt="" loading="lazy">
         <img src="assets/s7.webp" alt="" loading="lazy">
         <img src="assets/s8.webp" alt="" loading="lazy">
-        <span class="lens-shine"></span>
+        <span class="floor"></span>
+        <canvas class="lens-snow" width="440" height="440"></canvas>
+        <span class="glass"></span>
       </div>
-      <div class="lens-base"></div>
+      <img class="base" src="assets/base.svg" alt="">
       <p class="lens-place"><span data-place>내 방 · MR</span></p>
     </div>
 
