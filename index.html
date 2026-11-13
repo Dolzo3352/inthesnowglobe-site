@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>하얀 눈이 내려올 때면 | aNap</title>
+<meta name="description" content="스노우볼을 흔들면 눈 내리는 마을의 밤이 시작됩니다. 눈사람을 만들어 트리에 걸고 돌아오는 MR·VR 체험.">
+<meta property="og:title" content="하얀 눈이 내려올 때면">
+<meta property="og:description" content="스노우볼을 흔들면 눈 내리는 마을의 밤이 시작됩니다. aNap의 MR·VR 체험.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b1030">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero" id="top" data-state="room">
+  <div class="hero-village" aria-hidden="true"></div>
+  <canvas class="hero-snow" aria-hidden="true"></canvas>
+  <div class="hero-white" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="주요 메뉴">
+    <a class="nav-team" href="https://anap-site.vercel.app" target="_blank" rel="noopener">aNap</a>
+    <ul>
+      <li><a href="#story">이야기</a></li>
+      <li><a href="#people">마을 사람들</a></li>
+      <li><a href="#film">플레이 영상</a></li>
+      <li><a href="#team">만든 사람들</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-body">
+    <button class="globe" type="button" aria-describedby="globe-hint">
+      <span class="globe-glass">
+        <span class="globe-scene"></span>
+        <canvas class="globe-snow" width="360" height="360"></canvas>
+        <span class="globe-shine"></span>
+      </span>
+      <span class="globe-base"></span>
+      <span class="sr-only">스노우볼 흔들기</span>
+    </button>
+
+    <p class="hero-hint" id="globe-hint">
+      <span class="hint-text">스노우볼을 세 번 흔들어 보세요</span>
+      <span class="pips" aria-hidden="true"><i></i><i></i><i></i></span>
+    </p>
+
+    <h1 class="title">
+      <span class="title-line">하얀 눈이</span>
+      <span class="title-line">내려올 때면</span>
+    </h1>
+    <p class="title-en" lang="en">In the Snow Globe</p>
+    <p class="hero-lede">스노우볼을 흔들면, 눈 내리는 마을의 밤이 시작됩니다.</p>
+  </div>
+</header>
+
+<main>
+
+<section class="about" id="about">
+  <p class="about-lead">
+    손바닥 위 스노우볼을 흔들면 방 안에 눈이 흩날리고, 눈이 걷힌 자리에 작은 마을이 서 있습니다.
+    아이들에게 눈덩이를 건네받아 눈사람을 만들고, 트리에 걸어 두고, 다시 내 방으로 돌아옵니다.
+  </p>
+  <dl class="facts">
+    <div><dt>형식</dt><dd>MR에서 시작해 VR로 들어갔다가 MR로 돌아오는 체험</dd></div>
+    <div><dt>기기</dt><dd>Meta Quest, 컨트롤러 없이 맨손으로</dd></div>
+    <div><dt>인원</dt><dd>한 번에 한 사람</dd></div>
+    <div><dt>공간</dt><dd>가로세로 3 m 매트 위를 직접 걸어 다닙니다</dd></div>
+    <div><dt>상태</dt><dd>프로토타입 개발 중 (2026년 11월)</dd></div>
+  </dl>
+</section>
+
+<section class="story" id="story">
+  <h2 class="story-title">스노우볼 안에서 보내는 밤</h2>
+
+  <div class="story-grid">
+    <div class="lens-wrap" aria-hidden="true">
+      <div class="lens">
+        <img src="assets/s1.webp" alt="" class="on">
+        <img src="assets/s2.webp" alt="" loading="lazy">
+        <img src="assets/s3.webp" alt="" loading="lazy">
+        <img src="assets/s4.webp" alt="" loading="lazy">
+        <img src="assets/s5.webp" alt="" loading="lazy">
+        <img src="assets/s6.webp" alt="" loading="lazy">
+        <img src="assets/s7.webp" alt="" loading="lazy">
+        <img src="assets/s8.webp" alt="" loading="lazy">
+        <span class="lens-shine"></span>
+      </div>
+      <div class="lens-base"></div>
+      <p class="lens-place"><span data-place>내 방 · MR</span></p>
+    </div>
+
+    <ol class="steps">
+      <li class="step" data-place="내 방 · MR">
+        <h3>스노우볼을 흔든다</h3>
+        <p>내 방 한가운데, 손바닥 위에 스노우볼이 놓여 있습니다. 흔들 때마다 유리 안의 눈이 휘몰아치고, 세 번째에는 눈이 방 전체로 번져 시야가 하얗게 덮입니다.</p>
+      </li>
+      <li class="step" data-place="눈 마을 · VR">
+        <h3>눈이 걷히면 마을이다</h3>
+        <p>하얀 시야 속에서 가로등이 먼저 켜지고, 이어서 트리 불빛이 켜집니다. 안개가 걷히면 눈 덮인 지붕들이 광장을 둘러싸고 있습니다.</p>
+      </li>
+      <li class="step" data-place="눈 마을 · VR">
+        <h3>아이들을 따라 눈을 굴린다</h3>
+        <p>광장에서 두 아이가 눈사람을 만들고 있습니다. 상점 아저씨가 말합니다. “저 아이들처럼 눈사람을 만들어 보게.” 눈을 뭉쳐 바닥에 굴리면 굴린 자리에 자국이 남고 눈덩이가 커집니다.</p>
+      </li>
+      <li class="step" data-place="눈 마을 · VR">
+        <h3>아이들이 눈덩이를 건넨다</h3>
+        <p>“얘들아, 밥 먹으러 들어오렴!” 창가에서 엄마가 부릅니다. 아이들은 굴리던 눈덩이를 내밀고 집으로 뛰어갑니다. 그 눈덩이가 내 눈사람의 머리가 됩니다.</p>
+      </li>
+      <li class="step" data-place="눈 마을 · VR">
+        <h3>내 마음대로 꾸민다</h3>
+        <p>노점에 놓인 당근, 나뭇가지, 모자, 단추를 집어 원하는 자리에 붙입니다. 정해진 자리는 없습니다. 삐뚤게 붙이면 삐뚠 그대로 내 눈사람입니다.</p>
+      </li>
+      <li class="step" data-place="눈 마을 · VR">
+        <h3>금가루를 뿌려 트리에 건다</h3>
+        <p>아저씨가 빌려준 금가루를 뿌리면 눈사람이 꾸민 모양 그대로 작은 키링이 됩니다. 트리에 걸면 앞서 다녀간 사람들의 키링 곁에 남습니다.</p>
+      </li>
+      <li class="step" data-place="눈 마을 · VR">
+        <h3>통을 돌려주고 뒤를 돌아본다</h3>
+        <p>금가루 통을 돌려주자 아저씨가 묻습니다. “한번 뒤돌아 보겠나?” 트리에 불이 들어오고, 시계탑 종이 세 번 울리고, 달 앞으로 썰매가 지나갑니다.</p>
+      </li>
+      <li class="step" data-place="내 방 · MR">
+        <h3>다시 내 방</h3>
+        <p>눈보라가 몰아쳤다가 걷히면 내 방입니다. 손 위 스노우볼 안에는 방금 만든 눈사람이 서 있습니다.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="people" id="people">
+  <h2>마을 사람들</h2>
+  <p class="people-lead">이 마을에는 안내판이 없습니다. 무엇을 하면 되는지는 사람들이 몸짓과 목소리로 알려 줍니다.</p>
+  <ul class="cast">
+    <li>
+      <img src="assets/kid-a.webp" alt="노란 털모자와 빨간 패딩을 입은 아이" loading="lazy" width="640" height="560">
+      <h3>노란 모자 아이</h3>
+      <p>광장에서 눈덩이를 굴리며 만드는 법을 먼저 보여 줍니다.</p>
+    </li>
+    <li>
+      <img src="assets/kid-b.webp" alt="귀마개를 하고 초록 코트를 입은 아이" loading="lazy" width="640" height="560">
+      <h3>귀마개 아이</h3>
+      <p>집에 들어가기 전, 굴리던 눈덩이를 내밉니다. “이 눈덩이 쓰세요.”</p>
+    </li>
+    <li>
+      <img src="assets/merchant.webp" alt="콧수염에 빨간 앞치마를 두른 상점 아저씨" loading="lazy" width="640" height="560">
+      <h3>상점 아저씨</h3>
+      <p>금가루를 빌려주고, 통은 꼭 돌려받습니다. 갈 곳이 있다고 합니다.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="film" id="film">
+  <h2>플레이 영상</h2>
+  <p class="film-lead">처음부터 끝까지 한 번의 체험을 담은 2분 29초 영상입니다. 개발 중인 화면이라 목소리와 효과음은 임시본입니다.</p>
+  <video controls preload="none" playsinline poster="assets/poster.webp">
+    <source src="assets/playthrough.mp4" type="video/mp4">
+  </video>
+</section>
+
+</main>
+
+<footer class="foot" id="team">
+  <div class="foot-team">
+    <h2>만든 사람들</h2>
+    <p class="foot-anap">aNap <span>An Immersive Story Studio</span></p>
+    <dl>
+      <div><dt>기획 · 연출</dt><dd>송동호</dd></div>
+      <div><dt>개발</dt><dd>김하윤</dd></div>
+      <div><dt>아트</dt><dd>안지윤</dd></div>
+    </dl>
+  </div>
+  <div class="foot-links">
+    <h2>문의</h2>
+    <ul>
+      <li><a href="mailto:dearbrave1111@gmail.com">dearbrave1111@gmail.com</a></li>
+      <li><a href="https://instagram.com/anap__studio" target="_blank" rel="noopener">인스타그램 @anap__studio</a></li>
+      <li><a href="https://anap-site.vercel.app" target="_blank" rel="noopener">aNap 팀 사이트</a></li>
+    </ul>
+  </div>
+  <p class="foot-copy">© 2026 aNap</p>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
